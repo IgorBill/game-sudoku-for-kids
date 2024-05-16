@@ -1,0 +1,160 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: all .3s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal--isActive {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__overlay {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 350px;
+  min-width: 450px;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 3;
+  background: url('../images/modal-rules.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.modal__header {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.modal__header-text {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modal__closeIcon {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  
+}
+.modal__closeIcon:hover  {
+  background-color: #d90033;
+}
+
+
+.modal__closeIcon  {
+
+  transition: 300ms background-color cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.modal__image {
+  position: absolute;
+  left: -30px;
+  transform: scaleX(-1);
+  /* width: 100%; */
+  width: 350px;
+  height: 300px;
+}
+
+.modal__text {
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  left: 30px;
+  width: 250px;
+}
+
+/*END GAME WIN*/
+.end-game-win .modal__content, .end-game-lose .modal__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  height: 400px;
+  border: 1px solid white;
+}
+/* .end-game-win .modal__content{ 
+  background: url('../images/2.jpg') no-repeat center center;
+  background-size: cover;
+}
+ .end-game-lose .modal__content{
+   background: url('../images/1.jpg') no-repeat center center;
+   background-size: cover;
+} */
+
+.end-game-win p, .end-game-lose p {
+  color: rgb(217, 0, 51);
+  font-size: 60px;
+  margin: 0 auto;
+}
+
+.end-game-win img, .end-game-lose img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+#restartBtnWin, #restartBtnLose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: absolute; */
+  /* bottom: 200px; */
+  right: 300px;
+  font-family: 'Rubik Bubbles', cursive;
+  color: white;
+  padding: 20px 30px;
+  font-size: 40px;
+  border: none;
+  border: 3px solid rgb(217, 0, 51);
+  border-radius: 20px;
+  background-color: rgb(217, 0, 51);
+  margin: 0 auto;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.4), 0 8px 20px rgba(0, 0, 0, 0.2) inset;
+  transition: 300ms color cubic-bezier(0.075, 0.82, 0.165, 1), 300ms background-color cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+#restartBtnWin:hover span,
+#restartBtnWin:focus span, #restartBtnLose:hover span,
+#restartBtnLose:focus span {
+  color: rgb(217, 0, 51);
+
+}
+
+#restartBtnWin:hover,
+#restartBtnWin:focus, #restartBtnLose:hover,
+#restartBtnLose:focus {
+  background-color: white;
+}
+
